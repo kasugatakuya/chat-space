@@ -1,0 +1,26 @@
+.main
+  .main__header
+    .main__header__text
+      .main__header__text__title
+        バナナ同好会
+      .main__header__text__member
+        Member : 春日拓也
+    .main__header__edit
+      Edit
+      
+  .main__content
+    .main__content__text
+      .main__content__text__name
+        春日拓也
+      .main__content__text__day
+        2019/11/05(Tue) 13:19:30
+    .main__content__comment
+      バナナは美味しいよ
+  .main__form
+    %input.main__form__input-box{:placeholder => "type a message", :value => ""}
+    %label.main__form__image
+      = icon 'far','image'
+      %input{type: "file", class: "file"}
+    .main__form__icon
+      Send
+    
