@@ -1,0 +1,47 @@
+.side {
+  width: 300px;
+  float: left;
+  position: fixed;
+  &__header {
+    padding: 0 20px;
+    background-color: #253141;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__name {
+      font-weight: bold;
+      height: 16px;
+      color: #fff;
+    }
+    &__icon {
+      color: #fff;
+      display: flex;
+      cursor: pointer;
+      .link {
+        color: #fff;
+      }
+    }
+  }
+  &__content {
+    padding: 0 20px;
+    padding-top: 20px;
+    background-color: #213e51;
+    height: 960px;
+    &__group {
+      padding-bottom: 40px;
+      cursor: pointer;
+      &__name {
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      &__message {
+        font-weight: bold;
+        font-size: 11px;
+        color: #fff;
+      }
+    }
+  }
+}
