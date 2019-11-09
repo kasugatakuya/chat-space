@@ -1,13 +1,13 @@
 .side
   .side__header
     .side__header__name
-      春日拓也
+      = current_user.name
     .side__header__icon
       .side__header__icon__1
         =link_to "#" do
           = icon('fas', 'edit', class: 'link')
       .side__header__icon__2
-        =link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'link')
 
   .side__content
