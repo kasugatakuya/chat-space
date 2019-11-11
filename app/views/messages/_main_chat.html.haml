@@ -6,7 +6,9 @@
       .main__header__text__member
         Member : 春日拓也
     .main__header__edit
-      Edit
+      = link_to edit_group_path(current_user) do
+        edit
+      
       
   .main__content
     .main__content__text
