@@ -1,6 +1,6 @@
 .main {
   float:right;
-  width: calc(100vw - 300px);
+  width: calc(100% - 300px);
   &__header{
     position: fixed;
     height: 100px;
@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    z-index: 1;
     &__text {
       &__title {
         padding-top: 35px;
@@ -32,63 +33,75 @@
       cursor: pointer;
     }
   }
-  &__content {
-    padding-left: 40px;
-    padding-top: 146px;
-    background-color: #fafafa;
-    &__text {
-      display: flex;
-      &__name {
-        color: #434A54;
-        font-size: 16px;
-        padding-right: 10px;
-        font-weight: bold;
+  .messages {
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100% - 100px - 90px);
+    margin-top: 100px;
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: black;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: lightgray;
+          font-size: 12px;
+          padding-left: 10px;
+        }
       }
-      &__day {
-        color: #999999;
-        font-size: 12px;
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: black;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
       }
     }
-      &__comment {
-        color: #434A54;
-        font-size: 14px;
-        padding-top: 10px;
-      }
   }
-  &__form {
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    width: 1060px;
-    padding: 0 40px;
-    background-color: #ddd;
+    padding: 20px 0 20px 40px;
     position: fixed;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    &__input-box {
+    width: 1140px;
+    &__message {
+      border: none;
+      float: left;
       height: 50px;
-      padding: 0 0 0 10px;
-      width: 100%;
-      color: #434a54;
-      position: relative;
+      width: calc(100% - 150px);
+      padding-left: 10px;
+      margin-right: 10px;
     }
-    &__image {
-      font-size: 25px;
-      position: absolute;
-      left: 950px;
-      cursor: pointer;
-      .file{
+    &__mask {
+      background-color: white;
+      float: left;
+      height: 50px;
+      position: relative;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        position: absolute;
+        right: 120px;
+      }
+      .hidden {
         display: none;
       }
     }
-    &__icon {
-      width: 40px;
-      height: 50px;
-      line-height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
+    &__submit {
       background-color: #38aef0;
+      border: none;
       color: white;
-      cursor: pointer;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      padding: 0 30px;
     }
   }
 }
