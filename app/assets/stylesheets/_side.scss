@@ -1,6 +1,6 @@
 .side {
   width: 300px;
-  float: left;
+  box-sizing: border-box;
   position: fixed;
   &__header {
     padding: 0 20px;
